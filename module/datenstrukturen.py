@@ -28,7 +28,7 @@ t = tuple((59, 10))
 print(t[0])
 
 
-# DICTS:
+# DICTS: JSON
 # anlegen:
 d = {
     # key :  value
@@ -110,9 +110,26 @@ print(students[1]["name"] == "Andreas")
 print(students[1]["age"])
 
 # wie bekomme ich die PLZ von Olaf?
+print(students[2]["address"]["zip"])
 
 
+# Olaf besteht das erste Semester mit folgenden Vorlesungen: "BWL", "Programmierung"
+students[2]["Semester"] = students[2]["Semester"] + 1
+students[2]["bestande Vorelsungen"].append("BWL")
+students[2]["bestande Vorelsungen"].append("Programmierung")
 
+print(students)
+
+# Olaf wird exmatrikuliert:
+del students[2]
+print(students)
+
+# Olaf zieht um. neue adresse Köln, 123243, DE, Hauptksdflk 12
+students[2]["address"]["zip"] = "12324"
+students[2]["address"]["city"] = "Köln"
+students[2]["address"]["country"] = "DE"
+students[2]["address"]["street"] = "Hauptksdflk 12"
+print(students)
 
 
 
