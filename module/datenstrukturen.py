@@ -80,7 +80,7 @@ students = [
         "age": 49,
         "address": {
             "city": "Fellbach",
-            "zip": "324243",
+            "zip": "32428",
             "country": "USA",
             "street": "Hauptstraße 1"
         },
@@ -121,8 +121,8 @@ students[2]["bestande Vorelsungen"].append("Programmierung")
 print(students)
 
 # Olaf wird exmatrikuliert:
-del students[2]
-print(students)
+# del students[2]
+# print(students)
 
 # Olaf zieht um. neue adresse Köln, 123243, DE, Hauptksdflk 12
 students[2]["address"]["zip"] = "12324"
@@ -135,6 +135,26 @@ print(students)
 
 
 
+# login funktion für studenten einbauen:
+students[0]["email"] = students[0]["name"] + "@dhbw.de"
+students[0]["password"] = students[0]["name"] + "1234"
+students[1]["email"] = students[1]["name"] + "@dhbw.de"
+students[1]["password"] = students[1]["name"] + "1234"
+students[2]["email"] = students[2]["name"] + "@dhbw.de"
+students[2]["password"] = students[2]["name"] + "1234"
+
+# login prüfen:
+email = input("Email: ")
+pw = input("Password: ")
+if students[0]["email"] == email:
+    if students[0]["password"] == pw:
+        print("Hallo " + students[0]["name"] + ", willkommen zurück!")
+if students[1]["email"] == email:
+    if students[1]["password"] == pw:
+        print("Hallo " + students[1]["name"] + ", willkommen zurück!")
+if students[2]["email"] == email:
+    if students[2]["password"] == pw:
+        print("Hallo " + students[2]["name"] + ", willkommen zurück!")
 
 
 

@@ -8,7 +8,7 @@ if email == "willi@dhbw.de":
         print("Eingeloggt :)")
     else:
         print("Einloggen fehlgeschlagen :(")
-elif email == "olaf@dhbw.de": # elif steht für ELSE + IF
+elif email == "olaf@dhbw.de": # elif steht für ELSE + IF  ( ansonsten wenn)
     if pw == "1111":
         print("Eingeloggt :)")
     else:
