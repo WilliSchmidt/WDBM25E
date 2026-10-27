@@ -4,7 +4,8 @@ students = [
     ["andreas@dhbw.de", "abcd"],
     ["paul@dhbw.de", "9876"],
 ]
-while True:
+i = 0
+while i < 3:
     email = input("Enter your email: ")
     pwd = input("Enter your password: ")
     logged_in = False
@@ -12,10 +13,11 @@ while True:
         if student[0] == email and student[1] == pwd:
             logged_in = True
             break
-
+    i = i + 1
     if logged_in:
         print("du bist eingeloggt :)")
     else:
         print("du bist nicht eingeloggt:(")
-        break
+if i == 3:
+    print("du bist gesperrt!!!!!!!!")
 
